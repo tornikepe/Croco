@@ -1,0 +1,13 @@
+<div>
+  <section class="h1">
+    <h1 class="all-users">All Users</h1>
+  </section>
+  <!-- ngFor directive-ით გადავუარეთ userData-ს რომელშიც შენახულია API დან წამოღებული მონაცემები(res) -->
+  <!-- ამის შემდეგ მარტივად შემიძლია მივწვდე item იდან Id ის და მეთოს გადავცე რომელიც გადაიყვანს user-info component-ზე -->
+  <div class="main" *ngFor="let item of usersData">
+    <!-- item.name Angular-ის interpolation ში წერია -->
+    <button type="button" class="btn btn-success" (click)="userClick(item.id)">
+      {{ item.name }}
+    </button>
+  </div>
+</div>
